@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.8.2 on win32)" generated="20221118 14:22:44.060" rpa="false" schemaversion="3">
+<suite id="s1" name="Products Suite" source="D:\Robot_WebSourceLab\test_suites\products_suite.robot">
+<test id="s1-t1" name="Scenario: User want to sort the products" line="18">
+<kw name="Open Home Page" library="resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${MAIN_PAGE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221118 14:22:44.283" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20221118 14:22:44.290" level="INFO">Firefox driver log is always forced to to: D:\Robot_WebSourceLab\output\log\geckodriver-6.log</msg>
+<status status="PASS" starttime="20221118 14:22:44.281" endtime="20221118 14:22:49.148"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:44.281" endtime="20221118 14:22:49.148"/>
+</kw>
+<kw name="Given user see login page elements is displayed" library="login_step">
+<kw name="Home Page Displayed" library="login_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.150" endtime="20221118 14:22:49.178"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOGIN_USERNAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.198" level="INFO">Element 'user-name' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.178" endtime="20221118 14:22:49.198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.198" endtime="20221118 14:22:49.216"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.235" level="INFO">Element 'password' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.216" endtime="20221118 14:22:49.235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.235" endtime="20221118 14:22:49.251"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.272" level="INFO">Element 'login-button' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.251" endtime="20221118 14:22:49.273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.273" endtime="20221118 14:22:49.297"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOGIN_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.316" level="INFO">Element 'class:login_logo' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.297" endtime="20221118 14:22:49.316"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BOT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.316" endtime="20221118 14:22:49.335"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BOT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.350" level="INFO">Element 'class:bot_column' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.335" endtime="20221118 14:22:49.350"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.149" endtime="20221118 14:22:49.351"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.149" endtime="20221118 14:22:49.351"/>
+</kw>
+<kw name="Then user input username and password &quot;${VALID_USERNAME}&quot; &quot;${VALID_PASSWORD}&quot;" library="login_step" sourcename="User input username and password &quot;${username}&quot; &quot;${password}&quot;">
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:49.352" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20221118 14:22:49.352" endtime="20221118 14:22:49.398"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.352" endtime="20221118 14:22:49.398"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:49.399" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20221118 14:22:49.399" endtime="20221118 14:22:49.423"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.398" endtime="20221118 14:22:49.423"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.351" endtime="20221118 14:22:49.423"/>
+</kw>
+<kw name="Then user click on Login button" library="login_step">
+<kw name="Click Login Button" library="login_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:49.427" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20221118 14:22:49.426" endtime="20221118 14:22:49.682"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.426" endtime="20221118 14:22:49.682"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.424" endtime="20221118 14:22:49.683"/>
+</kw>
+<kw name="Then user read title page &quot;PRODUCTS&quot;" library="products_step" sourcename="User read title page &quot;${expected_title_page}&quot;">
+<kw name="Products Page Displayed" library="products_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_BURGER_MENU}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.684" endtime="20221118 14:22:49.701"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_BURGER_MENU}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.723" level="INFO">Element 'react-burger-menu-btn' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.701" endtime="20221118 14:22:49.723"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.723" endtime="20221118 14:22:49.743"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_LOGO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.756" level="INFO">Element 'class:app_logo' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.743" endtime="20221118 14:22:49.756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.757" endtime="20221118 14:22:49.775"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_TITLE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.788" level="INFO">Element 'class:title' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.775" endtime="20221118 14:22:49.789"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_CART}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.789" endtime="20221118 14:22:49.803"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_CART}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.816" level="INFO">Element 'shopping_cart_container' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.803" endtime="20221118 14:22:49.816"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221118 14:22:49.816" endtime="20221118 14:22:49.830"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221118 14:22:49.843" level="INFO">Element 'class:product_sort_container' is displayed.</msg>
+<status status="PASS" starttime="20221118 14:22:49.830" endtime="20221118 14:22:49.844"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.684" endtime="20221118 14:22:49.844"/>
+</kw>
+<kw name="Read Products Title" library="products_page">
+<arg>${expected_title_page}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${actual}</var>
+<arg>${PRODUCTS_TITLE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:49.860" level="INFO">${actual} = PRODUCTS</msg>
+<status status="PASS" starttime="20221118 14:22:49.844" endtime="20221118 14:22:49.860"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${PRODUCTS_TITLE}</arg>
+<arg>${expected_title_page}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221118 14:22:49.860" level="INFO">Verifying element 'class:title' contains exact text 'PRODUCTS'.</msg>
+<status status="PASS" starttime="20221118 14:22:49.860" endtime="20221118 14:22:49.868"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.844" endtime="20221118 14:22:49.868"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.683" endtime="20221118 14:22:49.868"/>
+</kw>
+<kw name="Then user sort products &quot;az&quot; &quot;za&quot; &quot;lohi&quot; &quot;hilo&quot;" library="products_step" sourcename="User sort products &quot;${sort1}&quot; &quot;${sort2}&quot; &quot;${sort3}&quot; &quot;${sort4}&quot;">
+<kw name="Click Sort" library="products_page">
+<arg>${sort1}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:49.870" level="INFO">Clicking element 'class:product_sort_container'.</msg>
+<status status="PASS" starttime="20221118 14:22:49.869" endtime="20221118 14:22:50.103"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value="${sort_order}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:50.104" level="INFO">Clicking element '//*[@value="az"]'.</msg>
+<status status="PASS" starttime="20221118 14:22:50.103" endtime="20221118 14:22:50.330"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.869" endtime="20221118 14:22:50.331"/>
+</kw>
+<kw name="Click Sort" library="products_page">
+<arg>${sort2}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:50.332" level="INFO">Clicking element 'class:product_sort_container'.</msg>
+<status status="PASS" starttime="20221118 14:22:50.332" endtime="20221118 14:22:50.578"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value="${sort_order}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:50.580" level="INFO">Clicking element '//*[@value="za"]'.</msg>
+<status status="PASS" starttime="20221118 14:22:50.579" endtime="20221118 14:22:50.825"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:50.331" endtime="20221118 14:22:50.825"/>
+</kw>
+<kw name="Click Sort" library="products_page">
+<arg>${sort3}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:50.827" level="INFO">Clicking element 'class:product_sort_container'.</msg>
+<status status="PASS" starttime="20221118 14:22:50.826" endtime="20221118 14:22:51.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value="${sort_order}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:51.076" level="INFO">Clicking element '//*[@value="lohi"]'.</msg>
+<status status="PASS" starttime="20221118 14:22:51.074" endtime="20221118 14:22:51.317"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:50.825" endtime="20221118 14:22:51.318"/>
+</kw>
+<kw name="Click Sort" library="products_page">
+<arg>${sort4}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PRODUCTS_SORT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:51.319" level="INFO">Clicking element 'class:product_sort_container'.</msg>
+<status status="PASS" starttime="20221118 14:22:51.318" endtime="20221118 14:22:51.549"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@value="${sort_order}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221118 14:22:51.551" level="INFO">Clicking element '//*[@value="hilo"]'.</msg>
+<status status="PASS" starttime="20221118 14:22:51.549" endtime="20221118 14:22:51.783"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:51.318" endtime="20221118 14:22:51.783"/>
+</kw>
+<status status="PASS" starttime="20221118 14:22:49.869" endtime="20221118 14:22:51.783"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221118 14:22:51.784" endtime="20221118 14:22:53.420"/>
+</kw>
+<tag>product_sort</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20221118 14:22:44.280" endtime="20221118 14:22:53.421"/>
+</test>
+<status status="PASS" starttime="20221118 14:22:44.062" endtime="20221118 14:22:53.423"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">product_sort</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Products Suite">Products Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

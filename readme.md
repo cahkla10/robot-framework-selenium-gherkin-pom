@@ -2,9 +2,9 @@
 
 - Download Python from [here](https://www.python.org/downloads/) and install it.
 - Check the installation using command ```python --version``` in terminal.
-- Install robot framework using command ```pip install robotframework``` in terminal.
-- Install Selenium Library using command ```pip install --upgrade robotframework-seleniumlibrary``` in terminal.
-- Check the installation using command ```pip list``` in terminal. Robot framework and selenium library should be in list.
+- Install robot framework using command ```pip install robotframework``` in terminal. If using Windows the command is ```python -m pip install robotframework```.
+- Install Selenium Library using command ```pip install --upgrade robotframework-seleniumlibrary``` in terminal. If using Windows the command is ```python -m pip install --upgrade robotframework-seleniumlibrary```.
+- Check the installation using command ```pip list``` in terminal.  If using Windows the command is ```python -m pip list```. Robot framework and selenium library should be in list.
 - Then clone this repository.
 
 
